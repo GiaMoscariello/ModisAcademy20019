@@ -6,10 +6,10 @@ class Bottles
 
     public static void main(String args[])
     {
-        writeLycris(System.out);
+        writeLyrics(System.out);
     }
 
-    public static void writeLycris(PrintStream out) {
+    public static void writeLyrics(PrintStream out) {
         String s = "s";
         for (int beers=99; beers>-1; beers--)
         {
