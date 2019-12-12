@@ -3,10 +3,6 @@ import java.io.PrintStream;
 class Bottles {
 
 
-    public static void main(String args[]) {
-        writeLyrics(System.out);
-    }
-
     public static void writeLyrics(PrintStream out) {
         for (int beers = 99; beers > -1; beers--) {
             if (beers == 0) {
@@ -34,11 +30,12 @@ class Bottles {
         }
     }
 
-    public static String actionAfterTakeBeer(int beers) {
-        if(beers == 0) {
-            return "Go to the store, buy some more,";
-        } else {
-            return "Take one down, pass it around,";
-        }
+
+    public static void main(String args[]) {
+        writeLyrics(System.out);
+    }
+
+    private static String actionAfterTakeBeer(int beers) {
+        return (beers == 0) ? "Go to the store, buy some more," : "Take one down, pass it around,";
     }
 }
