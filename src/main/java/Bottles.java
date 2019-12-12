@@ -1,11 +1,9 @@
 import java.io.PrintStream;
 
-class Bottles
-{
+class Bottles {
 
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         writeLyrics(System.out);
     }
 
@@ -23,8 +21,11 @@ class Bottles
                 out.println(beers + " bottle" + s + " of beer,");
                 out.print("Take one down, pass it around,");
             }
-
-            s = (beers - 1 == 1) ? "" : "s";
+            if (beers - 1 == 1) {
+                s = "";
+            } else {
+                s = "s";
+            }
             out.println(beers - 1 + " bottle" + s + " of beer on the wall.\r\n");
         }
     }
